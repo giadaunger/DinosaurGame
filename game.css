@@ -1,0 +1,89 @@
+body{
+    overflow: hidden;
+    margin: 0%;
+}
+
+#game{
+    width: 600px;
+    height: 360px;
+    border: 2px black solid;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-image: url('./img1.webp');
+    margin-top: 100px;
+}
+
+#dino{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 120px;
+    left: 20px;
+    background-image: url('./img2.png');
+    background-size: cover;
+}
+
+.animationJump{
+    animation: jump 600ms;
+}
+
+@keyframes jump {
+    0%{top:100px;}
+    30%{top:40px;}
+    70%{top:40px;}
+    100%{top:100px;}
+}
+
+#stone{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 60px;
+    left: 480px;
+    background-image: url(img3.png);
+    background-size: cover;
+}
+
+.animationStone1{
+    animation: stone 2000ms infinite linear;
+}
+
+.animationStone2{
+    animation: stone 1500ms infinite linear;
+}
+
+.animationStone3{
+    animation: stone 1000ms infinite linear;
+}
+
+@keyframes stone {
+    0%{left:580px;}
+    100%{left:-40px;}
+}
+
+#scoreDiv{
+    display: flex;
+    font-size: 1.2em;
+}
+
+#lose, #win{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(184, 183, 183);
+    opacity: 0;
+	animation: fadeIn 400ms ease-in both;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
